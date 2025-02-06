@@ -16,8 +16,8 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	enemy.setWindow(window);
 	enemy2.setWindow(window);
 
-	sf::View view;
-	view.setSize(window->getSize().x, window->getSize().y);
+	
+	
 }
 
 Level::~Level()
