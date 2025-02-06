@@ -8,6 +8,7 @@
 #include <iostream>
 #include "Player.h"
 #include "Enemy.h"
+#include "Background.h"
 
 
 class Level : BaseLevel {
@@ -26,4 +27,5 @@ private:
 	Player player;
 	Enemy enemy = Enemy("gfx/goomba.png", 100, 100);
 	Enemy enemy2 = Enemy("gfx/Beach_Ball.png", 357, 300);
+	Background background;
 };

@@ -15,6 +15,9 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	player.setInput(input);
 	enemy.setWindow(window);
 	enemy2.setWindow(window);
+
+	sf::View view;
+	view.setSize(window->getSize().x, window->getSize().y);
 }
 
 Level::~Level()
@@ -48,6 +51,7 @@ void Level::render()
 	beginDraw();
 
 	//window->draw(testSprite);
+	window->draw(background);
 	window->draw(player);
 	window->draw(enemy);
 	window->draw(enemy2);
