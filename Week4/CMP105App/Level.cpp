@@ -12,11 +12,12 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	testSprite.setSize(sf::Vector2f(100, 100));
 	testSprite.setPosition(100, 100);
 
-	player.setInput(input);
-	enemy.setWindow(window);
-	enemy2.setWindow(window);
+	player.setInput(in);
+	enemy.setWindow(hwnd);
+	enemy2.setWindow(hwnd);
 
-	
+	background.setWindow(hwnd);
+	background.setInput(in);
 	
 }
 
@@ -35,6 +36,7 @@ void Level::handleInput(float dt)
 	}
 
 	player.handleInput(dt);
+	background.handleInput(dt);
 }
 
 // Update game objects
@@ -49,9 +51,8 @@ void Level::update(float dt)
 void Level::render()
 {
 	beginDraw();
-
-	//window->draw(testSprite);
 	window->draw(background);
+	//window->draw(testSprite);
 	window->draw(player);
 	window->draw(enemy);
 	window->draw(enemy2);

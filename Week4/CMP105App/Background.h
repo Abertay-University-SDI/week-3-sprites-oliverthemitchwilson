@@ -1,12 +1,14 @@
 #pragma once
-#include "Framework/GameObject.h"
+#include <SFML/Graphics.hpp>
+#include "Framework/GameObject.h";
 
 class Background : public GameObject
 {
 public:
 	Background();
-	void update(float dt);
-private:
+	void handleInput(float dt);
+	void SetWindow(sf::RenderWindow* win);
+	void SetInput(Input* in);
 	sf::Texture texture;
 };
 

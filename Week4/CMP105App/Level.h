@@ -11,7 +11,7 @@
 #include "Background.h"
 
 
-class Level : BaseLevel {
+class Level : public BaseLevel {
 public:
 	Level(sf::RenderWindow* hwnd, Input* in);
 	~Level();
